@@ -1,0 +1,43 @@
+<div class="modal" tabindex="-1" role="dialog" ng-controller="LoginCtrl">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title">{{(createMode)?'Create Account':'Login'}}</h4>
+      </div>
+      <div class="modal-body">
+	    	<form role="form">
+					<p ng-show="err" class="error">{{err}}</p>
+				  <div class="form-group">
+				    <label for="InputEmail1">Email address</label>
+				    <div class="input-group">
+				    	<input type="email" ng-model="email" class="form-control" id="InputEmail1" placeholder="Enter email" ng-change="checkEmail()" required>
+				    	<span class="input-group-addon">
+				    		<i class="glyphicon {{(data.exists)?'glyphicon-remove':'glyphicon-ok'}}" style="color:green" ng-show="!data.exists&&createMode"></i>
+			    		</span>
+				  	</div>
+				  </div>
+				  <div class="form-group">
+				    <label for="InputPassword1">Password</label>
+				    <input type="password" ng-model="password" class="form-control" min-length="6" id="InputPassword1" placeholder="Password" required>
+				  </div>
+				  <div class="form-group" ng-show="createMode">
+				    <label for="InputPassword2">Confirm Password</label>
+				    <div class="input-group">
+				    	<input type="password" ng-model="confirm" class="form-control" id="InputPassword2" placeholder="Password" required>
+				    	<span class="input-group-addon">
+				    		<i class="glyphicon glyphicon-ok" style="color:green" ng-show="password==confirm"></i>
+				    	</span>
+				  	</div>
+				  </div>
+				</form>
+      </div>
+      <div class="modal-footer">
+<button type="submit" class="btn btn-success" ng-hide="createMode" ng-click="login()">Sign In</button>
+<button type="button" class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
+<button type="submit" class="btn btn-success" ng-show="createMode" ng-click="createAccount()">Create Account</button>
+<button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+/* Mixins */
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.link:hover{
+  cursor: pointer;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+form i.icon.error{
+  color: $myPrettyColor
+}
+
+form input + i.icon.error{
+  display: none;
+  margin-left: 8px;
+}
+
+
+form.ng-submitted input.ng-invalid + i.icon.error{
+  display: block;
+}
+form .has-error{
+  border: 1px solid darken($assertive, 15%);
+}
+form .has-success{
+  border: 1px solid darken($balanced, 15%);
+}
+form.ng-submitted input.ng-valid + i.icon.error{
+  display: none;
+}
+/*Demo Area*/
+.mobile-container{
+  position: relative;
+  width: 221px;
+  height: 464px;
+}
+.mobile-image{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.mobile-pane{
+  z-index: 2;
+  position: absolute;
+  display:block;
+  background: white;
+  width: 192px;
+  height: 332px;
+  left: 16px;
+  top: 66px;
+  border-radius: 12px;
+  border: 2px solid #22272D;
+  padding:0px;
+}
+.cheer-container{
+  padding: 4px 10px;
+}
+/*
+* Fonts
+*/
+@import "compass/css3";
+@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
+ 
+.example {
+  font-family: "Blooming Grove";
+  font-size: 1.5em;
+}
