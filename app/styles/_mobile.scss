@@ -4,11 +4,42 @@
 @import '../../bower_components/ionic/scss/variables';
 @import '../../bower_components/ionic/scss/mixins' ;
 
+$mobile-container-width: 221px;
+$mobile-container-height: 464px;
+$mobile-pane-height: 332px;
+$mobile-pane-width: 192px;
+
 //Customized
 @import 'mobile/_list.scss';
 @import 'mobile/_item.scss';
 @import 'mobile/_bar.scss';
 //Miscellaneous
+/*Demo Area*/
+.mobile-container{
+  position: relative;
+  width: $mobile-container-width;
+  height: $mobile-container-height;
+}
+.mobile-image{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.mobile-pane{
+  z-index: 2;
+  position: absolute;
+  display:block;
+  background: white;
+  width: $mobile-pane-width;
+  height: $mobile-pane-height;
+  left: 16px;
+  top: 66px;
+  border-radius: 12px;
+  border: 2px solid #22272D;
+  padding:0px;
+  overflow:hidden;
+}
 .mobile-content{
 	position: relative;
 }
@@ -19,7 +50,32 @@
 .has-subheader {
   top: $bar-height * 2;
 }
-
 .has-footer {
   bottom: $bar-height;
+}
+.mobile-backdrop {
+  @include transition(background-color 300ms ease-in-out);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-index-modal;
+  width: 100%;
+  height: $mobile-container-height;
+  background-color: $modal-backdrop-bg-inactive;
+
+  &.active {
+    background-color: $modal-backdrop-bg-active;
+  }
+}
+.mobile-popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: $z-index-popup;
+  .content{
+    position:relative;
+    left: -50%;
+    background:white;
+    @include border-radius(4px);
+  }
 }

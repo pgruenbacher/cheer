@@ -33,13 +33,26 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-
+  .slogan{
+    float:right;
+    margin-right: 100px;
+    background:white;
+    padding: 5px 5px;
+    @include border-radius(4px);
+    @include opacity(0.8);
+    font-size: $font-size-h1;
+  }
   .btn {
     font-size: 21px;
     padding: 14px 24px;
   }
 }
-
+.ohio-state-banner{
+  background-image: (image-url('ohio-state-banner.png'));
+  background-size: cover;
+  background-position: center;
+  height: 386px;
+}
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -71,29 +84,18 @@ form .has-success{
 form.ng-submitted input.ng-valid + i.icon.error{
   display: none;
 }
-/*Demo Area*/
-.mobile-container{
-  position: relative;
-  width: 221px;
-  height: 464px;
+.navbar-tight{
+  margin-bottom: 0px;
 }
-.mobile-image{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
+
+/****Helpers****/
+.radius-top{
+  @include border-bottom-radius(0px !important);
 }
-.mobile-pane{
-  z-index: 2;
-  position: absolute;
-  display:block;
-  background: white;
-  width: 192px;
-  height: 332px;
-  left: 16px;
-  top: 66px;
-  border-radius: 12px;
-  border: 2px solid #22272D;
-  padding:0px;
-  overflow:hidden;
+.radius-bottom{
+  @include border-top-radius(0px !important);
 }
+.center{
+  text-align:center;
+}
+
