@@ -20,7 +20,8 @@ angular
     'ui.router',
     'ngSanitize',
     'ngTouch',
-    'simpleLogin'
+    'simpleLogin',
+    'angular-momentum-scroll'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

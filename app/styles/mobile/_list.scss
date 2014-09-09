@@ -1,0 +1,119 @@
+
+/**
+ * mobile-lists
+ * --------------------------------------------------
+ */
+
+.mobile-list {
+  position: relative;
+  padding-top: $item-border-width;
+  padding-bottom: $item-border-width;
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 20px;
+}
+/* If a mobile-list is the last item in a container, don't add margin-bottom */
+.mobile-list:last-child {
+  margin-bottom: 0px;
+}
+
+/**
+ * mobile-list editing styles. These trigger when the entire mobile-list goes into
+ * "edit mode" or reordering mobile-list items
+ */
+.mobile-list-editing {
+  .item-content {
+    @include translate3d(50px, 0, 0);
+  }
+}
+.mobile-list-reordering {
+  .item-content {
+    margin-right: 50px;
+  }
+  .item-drag {
+    z-index: 1;
+  }
+}
+
+
+/**
+ * mobile-list Header
+ * --------------------------------------------------
+ */
+
+.mobile-list-header {
+  margin-top: $list-header-margin-top;
+  padding: $list-header-padding;
+  background-color: $list-header-bg;
+  color: $list-header-color;
+  font-weight: bold;
+}
+
+// when its a card make sure it doesn't duplicate top and bottom borders
+.card.mobile-list .mobile-list-item {
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+
+/**
+ * Cards and Inset mobile-lists
+ * --------------------------------------------------
+ * A card and mobile-list-inset are close to the same thing, except a card as a box shadow.
+ */
+
+.card,
+.mobile-list-inset {
+  overflow: hidden;
+  margin: ($content-padding * 2) $content-padding;
+  border-radius: $card-border-radius;
+  background-color: $card-body-bg;
+}
+
+.card {
+  padding-top: $item-border-width;
+  padding-bottom: $item-border-width;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.card .item,
+.mobile-list-inset .item,
+.padding > .mobile-list .item
+{
+  &:first-child {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+
+    .item-content {
+      border-top-left-radius: $card-border-radius;
+      border-top-right-radius: $card-border-radius;
+    }
+  }
+  &:last-child {
+    border-bottom-right-radius: $card-border-radius;
+    border-bottom-left-radius: $card-border-radius;
+
+    .item-content {
+      border-bottom-right-radius: $card-border-radius;
+      border-bottom-left-radius: $card-border-radius;
+    }
+  }
+}
+
+.card .item:last-child,
+.mobile-list-inset .item:last-child {
+  margin-bottom: $item-border-width * -1;
+}
+
+.card .item,
+.mobile-list-inset .item,
+.padding > .mobile-list .item,
+.padding-horizontal > .mobile-list .item {
+  margin-right: 0;
+  margin-left: 0;
+}
+.padding-left > .mobile-list .item {
+  margin-left: 0;
+}
+.padding-right > .mobile-list .item {
+  margin-right: 0;
+}

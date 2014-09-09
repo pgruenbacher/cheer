@@ -1,28 +1,46 @@
 <div class="demo-container">
-	<div class="header">
+	<div class="jumbotron">
 
 	</div>
 	<div class="content">
 		<div class="row">
 			<div class="col-md-4">
+				<div class="header">
+					<h3>Create</h3>
+				</div>
 				<div class="mobile-container">
 					<img class="mobile-image" src="images/mobile-container-black.svg"/>
 					<div class="mobile-pane"></div>
 				</div>
 			</div>
 			<div class="col-md-4">
+				<div class="header">
+					<h3>Vote</h3>
+				</div>
 				<div class="mobile-container">
-					<img src="images/mobile-container.svg"/>
+					<img src="images/mobile-container-black.svg"/>
 					<div class="mobile-pane">
-						<div class="cheer-container" ng-repeat="cheer in cheers">
-							<span class="cheer-title">{{cheer.title}}</span>
+						<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+							<h1 class="title">Header</h1>
+						</div>
+						<div style="width: 192px; height: 300px;" class="has-header" scrollable parameters="{{ {vScroll : true, snap: '.row'} }}">
+							<div class="mobile-list">
+								<div class="row mobile-item" ng-repeat="cheer in cheers">
+									<div class="">
+										<span class="cheer-title">{{cheer.title}}</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
+				<div class="header">
+					<h3>Cheer</h3>
+				</div>
 				<div class="mobile-container">
-					<img src="images/mobile-container.svg"/>
+					<img src="images/mobile-container-black.svg"/>
 					<div class="mobile-pane"></div>
 				</div>
 			</div>

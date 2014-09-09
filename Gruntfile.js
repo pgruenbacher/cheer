@@ -167,7 +167,12 @@ module.exports = function (grunt) {
       },
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath:  /\.\.\//,
+        exclude: [/bower_components.ionic.release.css.ionic.css/,
+                  /bower_components.bootstrap.dist.css.bootstrap.css/,
+                  /ionic/,
+                  /bower_components.bootstrap-sass.dist.css.bootstrap.css/,
+                  /bower_components.bootstrap-sass.dist.js.bootstrap.js/]
       },
       sass: {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -351,13 +356,6 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        },
-        {
-          expand: true,
-          flatten: true,
-          cwd: '',
-          dest: '<%= yeoman.dist %>/fonts',
-          src: ['bower_components/bootstrap/dist/fonts/*.*']
         }]
       },
       styles: {

@@ -19,6 +19,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/demo.html",
+			"settings":
+			{
+				"buffer_size": 1125,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/app.js",
+			"settings":
+			{
+				"buffer_size": 1228,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 4346,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_app.scss",
+			"settings":
+			{
+				"buffer_size": 1625,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/services/demoService.js",
+			"settings":
+			{
+				"buffer_size": 1577,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -44,6 +84,50 @@
 	},
 	"file_history":
 	[
+		"/C/Users/pgrue_000/blocksquad/.sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/_app.scssc",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_mobile.scss",
+		"/C/Users/pgrue_000/blocksquad/app/styles/main.scss",
+		"/C/Users/pgrue_000/blocksquad/Gruntfile.js",
+		"/C/Users/pgrue_000/blocksquad/app/views/about.html",
+		"/C/Users/pgrue_000/blocksquad/app/styles/mobile/_list.scss",
+		"/C/Users/pgrue_000/blocksquad/app/index.html",
+		"/C/Users/pgrue_000/blocksquad/bower.json",
+		"/C/Users/pgrue_000/blocksquad/.sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/main.scssc",
+		"/C/Users/pgrue_000/blocksquad/bower_components/ionic/scss/ionic.scss",
+		"/C/Users/pgrue_000/blocksquad/app/views/demo.html",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/app.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/demo.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/services/demoService.js",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_fonts.scss",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_app.scss",
+		"/C/Users/pgrue_000/blocksquad/test/spec/controllers/demo.js",
+		"/C/Users/pgrue_000/blocksquad/app/views/partials/navbar.html",
+		"/C/Users/pgrue_000/blocksquad/app/views/main.html",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/main.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/account.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/login.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/config.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/directives/blocksquad.directives.js",
+		"/C/Users/pgrue_000/blocksquad/app/views/partials/loginModal.html",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_variables.scss",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/factories/simpleLogin.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/decorators/ngcloakdirectivedecorator.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/factories/firebase.utils.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/directives/navbar.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/navbar.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/filters/blocksquad.filters.js",
+		"/C/Users/pgrue_000/blocksquad/bower_components/angularfire/dist/angularfire.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/factories/changeEmail.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/app.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/filters/interpolate.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/directives/holder.js",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/about.js",
+		"/C/Users/pgrue_000/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/pgrue_000/blocksquad/app/views/frontpage.html",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/frontpage.js",
+		"/C/Users/pgrue_000/blocksquad/app/views/navbar.html",
+		"/C/Users/pgrue_000/blocksquad/.bowerrc",
+		"/C/Users/pgrue_000/blocksquad/dist/index.html",
 		"/C/Users/pgrue_000/xcards2.0/bower.json",
 		"/C/Users/pgrue_000/xcards2.0/app/index.html",
 		"/C/Users/pgrue_000/xcards2.0/package.json",
@@ -127,39 +211,7 @@
 		"/C/Users/pgrue_000/xcards/www/lib/ngCordova/src/plugins/contacts.js",
 		"/C/Users/pgrue_000/xcards/www/lib/angular/angular.js",
 		"/C/Users/pgrue_000/xcards/www/lib/restangular/dist/restangular.js",
-		"/C/Users/pgrue_000/xcards/www/js/directives.js",
-		"/C/Users/pgrue_000/xcards/platforms/android/assets/www/index.html",
-		"/C/Users/pgrue_000/xcards/www/config.xml",
-		"/C/Users/pgrue_000/xcards/config.xml",
-		"/C/Users/pgrue_000/xcards/www/js/app.js",
-		"/C/Users/pgrue_000/xcards/ionic.project",
-		"/C/Users/pgrue_000/xcards/www/js/controllers.js",
-		"/C/Users/pgrue_000/xcards/www/css/logo.css",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-facebook/lib/angular-facebook.js",
-		"/C/Users/pgrue_000/xcards/.gitignore",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-facebook/package.json",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-facebook/.bower.json",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-facebook/bower.json",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-facebook/lib/angular-facebook-phonegap.js",
-		"/C/Users/pgrue_000/xcards/www/css/ionic.app.css",
-		"/C/Users/pgrue_000/xcards/www/lib/ionic/scss/_loading.scss",
-		"/C/Users/pgrue_000/xcards/www/lib/ionic/scss/ionic.scss",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-local-storage/angular-local-storage.js",
-		"/C/Users/pgrue_000/xcards/www/templates/address-detail.html",
-		"/C/Users/pgrue_000/xcards/www/lib/lodash/dist/lodash.js",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-resource/angular-resource.js",
-		"/C/Users/pgrue_000/xcards/www/lib/restangular/karma.conf.js",
-		"/C/Users/pgrue_000/xcards/www/lib/angular-http-auth/src/http-auth-interceptor.js",
-		"/C/Users/pgrue_000/AppData/Roaming/Sublime Text 2/Packages/Color Scheme - Default/Monokai.tmTheme",
-		"/C/Users/pgrue_000/xcards/www/templates/menu.html",
-		"/C/Users/pgrue_000/xcards/test/karma.conf.js",
-		"/C/Users/pgrue_000/xcards/test/unit/controllersSpec.js",
-		"/C/Users/pgrue_000/xcards/test/protractor-conf.js",
-		"/C/Users/pgrue_000/xcards/test/unit/servicesSpec.js",
-		"/C/Users/pgrue_000/xcards/Gruntfile.js",
-		"/C/Users/pgrue_000/xcards/www/.gitignore",
-		"/C/Users/pgrue_000/xcards/sublimeProject.sublime-workspace",
-		"/C/Users/pgrue_000/xcards/ionic.sublime-workspace"
+		"/C/Users/pgrue_000/xcards/www/js/directives.js"
 	],
 	"find":
 	{
@@ -177,6 +229,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"onScroll",
+			"ui.scroll",
+			"$mobile",
+			"list",
+			"concurrent",
+			"easeOutCubic",
+			"scroll",
+			"ionic.ui.scroll",
+			"ionic.ui.list",
+			"ionic.ui.scroll",
+			"scroll",
+			"card",
+			"list",
+			"wiredep",
+			"fonts",
+			"wiredep",
+			"fonts",
+			"placeholder",
+			"user_id",
+			"assert",
+			"jshint",
+			".html",
+			"server",
+			"compass:server",
+			"''",
+			"copy",
+			"favico",
+			"compass",
+			"dist",
+			"copy",
+			"target",
 			"wiredep",
 			"bower",
 			"bower.json",
@@ -273,38 +356,7 @@
 			"UserSErvice",
 			"LocalStorage",
 			"common",
-			"auth-logout",
-			"getUser(",
-			"saveUser",
-			"UserSErvice",
-			"localStorageService",
-			"localStorage",
-			"CacheAndCall",
-			"userService",
-			"authenticate(",
-			"USerSErvice",
-			"broadcast",
-			"[0",
-			"preference",
-			"prefe",
-			"preferred",
-			"prefer",
-			"prefferedCtrl",
-			"createModal",
-			"createModalCtrl",
-			"createModal",
-			"createCtrl",
-			"back",
-			"push",
-			"radio",
-			"addresse ",
-			"addresse",
-			"save",
-			"preference",
-			"0055",
-			"length",
-			"permission",
-			"saveUser"
+			"auth-logout"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -322,8 +374,147 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/demo.html",
+					"settings":
+					{
+						"buffer_size": 1125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								575,
+								575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 259.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/app.js",
+					"settings":
+					{
+						"buffer_size": 1228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								416,
+								416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 241.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 4346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 834.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/_app.scss",
+					"settings":
+					{
+						"buffer_size": 1625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1486,
+								1489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1414.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/services/demoService.js",
+					"settings":
+					{
+						"buffer_size": 1577,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1350,
+								1350
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1086.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -369,6 +560,122 @@
 		"selected_items":
 		[
 			[
+				"services/demoser",
+				"app/scripts/services/demoService.js"
+			],
+			[
+				"_app",
+				"app/styles/_app.scss"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"app.js",
+				"app/scripts/app.js"
+			],
+			[
+				"demo",
+				"app/views/demo.html"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"main.scss",
+				"app/styles/main.scss"
+			],
+			[
+				"main",
+				".sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/main.scssc"
+			],
+			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"controllers/demo",
+				"app/scripts/controllers/demo.js"
+			],
+			[
+				"app.scs",
+				"app/styles/_app.scss"
+			],
+			[
+				"navbar",
+				"app/views/partials/navbar.html"
+			],
+			[
+				"app",
+				"app/scripts/app.js"
+			],
+			[
+				"scss",
+				"app/styles/main.scss"
+			],
+			[
+				"login",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				"simplelo",
+				"app/scripts/factories/simpleLogin.js"
+			],
+			[
+				"config",
+				"app/scripts/config.js"
+			],
+			[
+				"fbutil",
+				"app/scripts/factories/firebase.utils.js"
+			],
+			[
+				"simplel",
+				"app/scripts/factories/simpleLogin.js"
+			],
+			[
+				"directive",
+				"app/scripts/directives/blocksquad.directives.js"
+			],
+			[
+				"ngcloa",
+				"app/scripts/decorators/ngcloakdirectivedecorator.js"
+			],
+			[
+				"interpo",
+				"app/scripts/filters/interpolate.js"
+			],
+			[
+				"account",
+				"app/scripts/controllers/account.js"
+			],
+			[
+				"controllers/app",
+				"app/scripts/controllers/app.js"
+			],
+			[
+				"app.",
+				"app/scripts/app.js"
+			],
+			[
+				"angularfire",
+				"bower_components/angularfire/dist/angularfire.js"
+			],
+			[
+				"holder",
+				"app/scripts/directives/holder.js"
+			],
+			[
+				"frontpage",
+				"app/views/frontpage.html"
+			],
+			[
 				"templates/",
 				"app/templates/single.html"
 			],
@@ -411,6 +718,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 240.0,
+	"side_bar_width": 303.0,
 	"status_bar_visible": true
 }

@@ -1,0 +1,25 @@
+//Ionic Stuff
+@import '../../bower_components/ionic/scss/ionicons/ionicons';
+// Variables
+@import '../../bower_components/ionic/scss/variables';
+@import '../../bower_components/ionic/scss/mixins' ;
+
+//Customized
+@import 'mobile/_list.scss';
+@import 'mobile/_item.scss';
+@import 'mobile/_bar.scss';
+//Miscellaneous
+.mobile-content{
+	position: relative;
+}
+.has-header {
+  top: $bar-height;
+}
+
+.has-subheader {
+  top: $bar-height * 2;
+}
+
+.has-footer {
+  bottom: $bar-height;
+}

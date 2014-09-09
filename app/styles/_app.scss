@@ -95,17 +95,5 @@ form.ng-submitted input.ng-valid + i.icon.error{
   border-radius: 12px;
   border: 2px solid #22272D;
   padding:0px;
-}
-.cheer-container{
-  padding: 4px 10px;
-}
-/*
-* Fonts
-*/
-@import "compass/css3";
-@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
- 
-.example {
-  font-family: "Blooming Grove";
-  font-size: 1.5em;
+  overflow:hidden;
 }

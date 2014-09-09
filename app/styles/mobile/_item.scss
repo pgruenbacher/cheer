@@ -1,0 +1,655 @@
+/**
+ * Items
+ * --------------------------------------------------
+ */
+
+.mobile-item {
+  @include item-style($item-default-bg, $item-default-border, $item-default-text);
+  @include transition(margin-left 0.2s ease-in-out, margin-right 0.2s ease-in-out, left 0.2s ease-in-out);
+
+  position: relative;
+  z-index: $z-index-item; // Make sure the borders and stuff don't get hidden by children
+  display: block;
+
+  margin: $item-border-width * -1;
+  padding: $item-padding;
+
+  border-width: $item-border-width;
+  border-style: solid;
+  font-size: $item-font-size;
+
+  h2 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+  }
+  h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+  }
+  h4 {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+  }
+  h5, h6 {
+    margin: 0 0 3px 0;
+    font-size: 10px;
+  }
+  p {
+    color: #666;
+    font-size: 14px;
+  }
+
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  // Align badges within items
+  .badge {
+    @include display-flex();
+    position: absolute;
+    top: $item-padding;
+    right: ($item-padding * 2) + 5;
+  }
+  &.mobile-item-divider .badge {
+    top: $item-padding / 2;
+  }
+  .badge + .badge {
+    margin-right: 5px;
+  }
+
+  // Different themes for items
+  &.mobile-item-light {
+    @include item-style($item-light-bg, $item-light-border, $item-light-text);
+  }
+  &.mobile-item-stable {
+    @include item-style($item-stable-bg, $item-stable-border, $item-stable-text);
+  }
+  &.mobile-item-positive {
+    @include item-style($item-positive-bg, $item-positive-border, $item-positive-text);
+  }
+  &.mobile-item-calm {
+    @include item-style($item-calm-bg, $item-calm-border, $item-calm-text);
+  }
+  &.mobile-item-assertive {
+    @include item-style($item-assertive-bg, $item-assertive-border, $item-assertive-text);
+  }
+  &.mobile-item-balanced {
+    @include item-style($item-balanced-bg, $item-balanced-border, $item-balanced-text);
+  }
+  &.mobile-item-energized {
+    @include item-style($item-energized-bg, $item-energized-border, $item-energized-text);
+  }
+  &.mobile-item-royal {
+    @include item-style($item-royal-bg, $item-royal-border, $item-royal-text);
+  }
+  &.mobile-item-dark {
+    @include item-style($item-dark-bg, $item-dark-border, $item-dark-text);
+  }
+
+}
+
+// Link and Button Active States
+.mobile-item.active:not(.mobile-item-divider):not(.mobile-item-input):not(.mobile-item-input-inset),
+.mobile-item-complex.active .mobile-item-content {
+  @include item-active-style($item-default-active-bg, $item-default-active-border);
+
+  // Different active themes for <a> and <button> items
+  &.mobile-item-light {
+    @include item-active-style($item-light-active-bg, $item-light-active-border);
+  }
+  &.mobile-item-stable {
+    @include item-active-style($item-stable-active-bg, $item-stable-active-border);
+  }
+  &.mobile-item-positive {
+    @include item-active-style($item-positive-active-bg, $item-positive-active-border);
+  }
+  &.mobile-item-calm {
+    @include item-active-style($item-calm-active-bg, $item-calm-active-border);
+  }
+  &.mobile-item-assertive {
+    @include item-active-style($item-assertive-active-bg, $item-assertive-active-border);
+  }
+  &.mobile-item-balanced {
+    @include item-active-style($item-balanced-active-bg, $item-balanced-active-border);
+  }
+  &.mobile-item-energized {
+    @include item-active-style($item-energized-active-bg, $item-energized-active-border);
+  }
+  &.mobile-item-royal {
+    @include item-active-style($item-royal-active-bg, $item-royal-active-border);
+  }
+  &.mobile-item-dark {
+    @include item-active-style($item-dark-active-bg, $item-dark-active-border);
+  }
+}
+
+// Handle text overflow
+.mobile-item,
+.mobile-item h1,
+.mobile-item h2,
+.mobile-item h3,
+.mobile-item h4,
+.mobile-item h5,
+.mobile-item h6,
+.mobile-item p,
+.mobile-item-content,
+.mobile-item-content h1,
+.mobile-item-content h2,
+.mobile-item-content h3,
+.mobile-item-content h4,
+.mobile-item-content h5,
+.mobile-item-content h6,
+.mobile-item-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Linked list items
+a.mobile-item {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+/**
+ * Complex Items
+ * --------------------------------------------------
+ * Adding .mobile-item-complex allows the .mobile-item to be slidable and
+ * have options underneath the button, but also requires an
+ * additional .mobile-item-content element inside .mobile-item.
+ * Basically .mobile-item-complex removes any default settings which
+ * .mobile-item added, so that .mobile-item-content looks them as just .mobile-item.
+ */
+
+.mobile-item-complex,
+a.mobile-item.mobile-item-complex,
+button.mobile-item.mobile-item-complex {
+  padding: 0;
+}
+.mobile-item-complex .mobile-item-content,
+.mobile-item-radio .mobile-item-content {
+  /**
+   * The content area of a complex list item. This area can
+   * Slide left and right and be dragged to support different
+   * UI interactions.
+   */
+  @include transition(all 0.1s ease-in-out);
+  position: relative;
+  z-index: $z-index-item;
+
+  padding: $item-padding (($item-padding * 3) - 5) $item-padding $item-padding;
+  border: none;
+
+  background-color: white;
+}
+
+a.mobile-item-content {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mobile-item-text-wrap .mobile-item,
+.mobile-item-text-wrap,
+.mobile-item-text-wrap h1,
+.mobile-item-text-wrap h2,
+.mobile-item-text-wrap h3,
+.mobile-item-text-wrap h4,
+.mobile-item-text-wrap h5,
+.mobile-item-text-wrap h6,
+.mobile-item-text-wrap p,
+.mobile-item-complex.mobile-item-text-wrap .mobile-item-content,
+.mobile-item-body h1,
+.mobile-item-body h2,
+.mobile-item-body h3,
+.mobile-item-body h4,
+.mobile-item-body h5,
+.mobile-item-body h6,
+.mobile-item-body p {
+  overflow: hidden;
+  white-space: normal;
+}
+.mobile-item-complex.mobile-item-text-wrap,
+.mobile-item-complex.mobile-item-text-wrap h1,
+.mobile-item-complex.mobile-item-text-wrap h2,
+.mobile-item-complex.mobile-item-text-wrap h3,
+.mobile-item-complex.mobile-item-text-wrap h4,
+.mobile-item-complex.mobile-item-text-wrap h5,
+.mobile-item-complex.mobile-item-text-wrap h6,
+.mobile-item-complex.mobile-item-text-wrap p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/**
+ * Item Icons
+ * --------------------------------------------------
+ */
+
+.mobile-item-icon-left .icon,
+.mobile-item-icon-right .icon {
+  @include display-flex();
+  @include align-items(center);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: $item-icon-font-size;
+
+  &:before {
+    display: block;
+    width: $item-icon-font-size;
+    text-align: center;
+  }
+}
+
+.mobile-item .fill-icon {
+  min-width: $item-icon-fill-font-size + 2;
+  min-height: $item-icon-fill-font-size + 2;
+  font-size: $item-icon-fill-font-size;
+}
+
+.mobile-item-icon-left {
+  padding-left: ($item-padding * 3);
+
+  .icon {
+    left: $item-padding / 2;
+  }
+}
+.mobile-item-complex.mobile-item-icon-left {
+  padding-left: 0;
+
+  .mobile-item-content {
+    padding-left: ($item-padding * 3);
+  }
+}
+
+.mobile-item-icon-right {
+  padding-right: ($item-padding * 3);
+
+  .icon {
+    right: $item-padding / 2;
+  }
+}
+.mobile-item-complex.mobile-item-icon-right {
+  padding-right: 0;
+
+  .mobile-item-content {
+    padding-right: ($item-padding * 3);
+  }
+}
+
+.mobile-item-icon-left.mobile-item-icon-right .icon:first-child {
+  right: auto;
+}
+.mobile-item-icon-left.mobile-item-icon-right .icon:last-child {
+  left: auto;
+}
+
+
+/**
+ * Item Button
+ * --------------------------------------------------
+ * An item button is a child button inside an .mobile-item (not the entire .mobile-item)
+ */
+
+.mobile-item-button-left {
+  padding-left: $item-padding * 4.5;
+}
+
+.mobile-item-button-left > .button,
+.mobile-item-button-left .mobile-item-content > .button {
+  @include display-flex();
+  @include align-items(center);
+  position: absolute;
+  top: $item-padding / 2;
+  left: $item-padding / 2;
+  min-width: $item-icon-font-size + ($button-border-width * 2);
+  min-height: $item-icon-font-size + ($button-border-width * 2);
+  font-size: $item-button-font-size;
+  line-height: $item-button-line-height;
+
+  .icon:before {
+    position: relative;
+    left: auto;
+    width: auto;
+    line-height: $item-icon-font-size - 1;
+  }
+
+  > .button {
+    margin: 0px 2px;
+    min-height: $item-icon-font-size + ($button-border-width * 2);
+    font-size: $item-button-font-size;
+    line-height: $item-button-line-height;
+  }
+}
+
+.mobile-item-button-right,
+a.mobile-item.mobile-item-button-right,
+button.mobile-item.mobile-item-button-right {
+  padding-right: $item-padding * 5;
+}
+
+.mobile-item-button-right > .button,
+.mobile-item-button-right .mobile-item-content > .button,
+.mobile-item-button-right > .buttons,
+.mobile-item-button-right .mobile-item-content > .buttons {
+  @include display-flex();
+  @include align-items(center);
+  position: absolute;
+  top: $item-padding / 2;
+  right: $item-padding;
+  min-width: $item-icon-font-size + ($button-border-width * 2);
+  min-height: $item-icon-font-size + ($button-border-width * 2);
+  font-size: $item-button-font-size;
+  line-height: $item-button-line-height;
+
+  .icon:before {
+    position: relative;
+    left: auto;
+    width: auto;
+    line-height: $item-icon-font-size - 1;
+  }
+
+  > .button {
+    margin: 0px 2px;
+    min-width: $item-icon-font-size + ($button-border-width * 2);
+    min-height: $item-icon-font-size + ($button-border-width * 2);
+    font-size: $item-button-font-size;
+    line-height: $item-button-line-height;
+  }
+}
+
+
+/**
+ * Auto Right Arrow Icon
+ * --------------------------------------------------
+ * By default, if an .mobile-item is created out of an <a> or <button>
+ * then a arrow will be added to the right side of the item.
+ */
+
+a.mobile-item,
+button.mobile-item,
+.mobile-item a[href].mobile-item-content,
+.mobile-item[ng-click] a.mobile-item-content {
+  padding-right: (($item-padding * 3) - 5);
+}
+
+a.mobile-item:after,
+button.mobile-item:after,
+.mobile-item a[href].mobile-item-content:after,
+.mobile-item[ng-click] a.mobile-item-content:after {
+  /* By default, both <a> and <button> have right side arrow icons */
+  @include display-flex();
+  @include align-items(center);
+  @include font-smoothing(antialiased);
+  position: absolute;
+  top: 0;
+  right: $item-padding - 4;
+  height: 100%;
+  color: #ccc;
+  content: "\f125"; // ion-chevron-right
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 16px;
+  font-family: 'Ionicons';
+  line-height: 1;
+  speak: none;
+}
+
+.grade-b,
+.grade-c {
+  a.mobile-item:after,
+  button.mobile-item:after,
+  .mobile-item a[href].mobile-item-content:after,
+  .mobile-item[ng-click] a.mobile-item-content:after {
+    // override Ionicon arrow with boring character for low end devices
+    @include font-smoothing(none);
+    content: '>';
+    font-family: 'monospace';
+  }
+}
+
+// do not show the default right arrow when they want their own right side icon
+a.mobile-item-icon-right:after,
+button.mobile-item-icon-right:after,
+a.mobile-item-button-right:after,
+button.mobile-item-button-right:after,
+.mobile-item a.mobile-item-content:after {
+  display: none;
+}
+
+
+// Item Avatar
+// -------------------------------
+
+.mobile-item-avatar {
+  padding-left: $item-avitar-width + ($item-padding * 2);
+  min-height: $item-avitar-width + ($item-padding * 2);
+
+  img:first-child, .mobile-item-img {
+    position: absolute;
+    top: $item-padding;
+    left: $item-padding;
+    max-width: $item-avitar-width;
+    max-height: $item-avitar-height;
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+
+// Item Thumbnails
+// -------------------------------
+
+.mobile-item-thumbnail-left,
+.mobile-item-thumbnail-left .mobile-item-content {
+  padding-left: $item-thumbnail-width + $item-thumbnail-margin + $item-padding;
+  min-height: $item-thumbnail-height + ($item-thumbnail-margin * 2);
+
+  > img:first-child, > .mobile-item-image {
+    position: absolute;
+    top: $item-thumbnail-margin;
+    left: $item-thumbnail-margin;
+    max-width: $item-thumbnail-width;
+    max-height: $item-thumbnail-height;
+    width: 100%;
+  }
+}
+.mobile-item-thumbnail-left.mobile-item-complex {
+  padding-left: 0;
+}
+
+.mobile-item-thumbnail-right,
+.mobile-item-thumbnail-right .mobile-item-content {
+  padding-right: $item-thumbnail-width + $item-thumbnail-margin + $item-padding;
+  min-height: $item-thumbnail-height + ($item-thumbnail-margin * 2);
+
+  > img:first-child, > .mobile-item-image {
+    position: absolute;
+    top: $item-thumbnail-margin;
+    right: $item-thumbnail-margin;
+    max-width: $item-thumbnail-width;
+    max-height: $item-thumbnail-height;
+    width: 100%;
+  }
+}
+.mobile-item-thumbnail-left.mobile-item-complex {
+  padding-right: 0;
+}
+
+
+// Item Image
+// -------------------------------
+
+.mobile-item-image {
+  padding: 0;
+  text-align: center;
+
+  img:first-child, .mobile-list-img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+
+// Item Body
+// -------------------------------
+
+.mobile-item-body {
+  overflow: auto;
+  padding: $item-padding;
+  text-overflow: inherit;
+  white-space: normal;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin-top: $item-padding;
+    margin-bottom: $item-padding;
+  }
+}
+
+
+// Item Divider
+// -------------------------------
+
+.mobile-item-divider {
+  padding-top: $item-padding / 2;
+  padding-bottom: $item-padding / 2;
+  min-height: 30px;
+  background-color: $item-divider-bg;
+  color: $item-divider-color;
+  font-weight: bold;
+}
+
+
+// Item Note
+// -------------------------------
+
+.mobile-item-note {
+  float: right;
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+// Item Editing
+// -------------------------------
+
+.mobile-item-reordering {
+  position: absolute;
+  z-index: $z-index-item-reordering;
+  width: 100%;
+}
+
+.mobile-item-placeholder {
+  opacity: 0.7;
+}
+
+
+/**
+ * The left-side edit area of a complex list item. This area shows
+ * whe the list item is in edit mode.
+ */
+.mobile-item-edit {
+  @include transition(left 0.2s ease-in-out, opacity 0.2s ease-in-out);
+  position: absolute;
+  top: 0;
+  left: 8px;
+  z-index: $z-index-item-edit;
+  width: 48px;
+  height: 100%;
+  line-height: 100%;
+
+  .button {
+    height: 100%;
+
+    &.icon {
+      @include display-flex();
+      @include align-items(center);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      color: $assertive;
+      font-size: 24px;
+    }
+  }
+
+  &.ng-enter {
+    @include transition(left 0.2s ease-in-out, opacity 0.2s ease-in-out);
+    left: -48px;
+    opacity: 0;
+  }
+  &.ng-enter-active {
+    left: 8px;
+    opacity: 1;
+  }
+  &.ng-leave {
+    @include transition(left 0.2s ease-in-out, opacity 0.2s ease-in-out);
+    left: 0px;
+    opacity: 1;
+  }
+  &.ng-leave-active {
+    left: -48px;
+    opacity: 0;
+  }
+}
+
+.mobile-item-drag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 50px;
+  height: 100%;
+  background: inherit;
+
+  .button {
+    min-width: 42px;
+    height: 100%;
+
+    &.icon:before {
+      @include display-flex();
+      @include align-items(center);
+      position: absolute;
+      top: 0;
+      height: 100%;
+      font-size: 32px;
+    }
+  }
+}
+/**
+ * The hidden right-side buttons that can be exposed under a list item
+ * with dragging.
+ */
+.mobile-item-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: $z-index-item-options;
+  height: 100%;
+
+  .button {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.mobile-item-options-hide .mobile-item-options {
+  display: none;
+}
