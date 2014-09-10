@@ -3,7 +3,16 @@
 
 	</div>
 	<div class="content">
-		<ul rn-carousel="demo" rn-carousel-control>
+		<div class="center">
+			<div class="title" animate-on-change="carouselIndex">
+				<h1>{{demo[carouselIndex].title}}</h1>
+			</div>
+			<div class="underline"></div>
+			<div class="information" animate-on-change="carouselIndex">
+				<p>{{demo[carouselIndex].message}}</p>
+			</div>
+		</div>
+		<ul rn-carousel="demo" rn-carousel-control rn-carousel-index="carouselIndex" rn-carousel-indicator="true">
 			<li class="carousel-item">
 				<div class="row">
 					<div class="col-md-4">
@@ -66,7 +75,6 @@
 			<li class="carousel-item">
 				<div class="row">
 					<div class="col-md-6">
-
 						<div class="header">
 							<h3>Push Data</h3>
 						</div>
@@ -82,16 +90,23 @@
 									<div class="mobile-list">
 										<div class="form-group">
 										    <label for="exampleInputEmail1">Chat with yourself</label>
-										   	<input ng-model="first.input" class="form-control" placeholder="enter text"/>
-										    <button ng-click="send(first.input,'first')" class="btn btn-success">Send</button>
-										    <p class="texting small" ng-show="first.texting">First phone is texting...</p>
-										    <div class="text" ng-repeat="text in texts">
-										    	<div class="{{(text.sender=='first')?'sender':'recipient'">
-										    		text.message
+										    <div ng-repeat="text in texts">
+										    	<div class="text {{(text.sender=='first')?'sender':'recipient'}}">
+										    		{{text.message}}
 									    		</div>
 										    </div>
+										    
 									  	</div>
 									</div>
+								</div>
+								<div class="absolute-bottom">
+								    <p class="texting small" ng-show="second.texting">First phone is texting...</p>
+									<div class="input-group">
+								    	<input ng-change="textingIndicator(first,true)" ng-blur="textingIndicator(first,false)" ng-model="first.input" class="form-control" placeholder="enter text">
+								    	<span class="input-group-btn">
+								    		<button ng-click="send(first.input,'first')" class="btn btn-default">Send</button>
+								    	</span>
+								    </div>
 								</div>
 							</div>
 						</div>
@@ -109,16 +124,76 @@
 								<div class="mobile-content has-header">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Chat with yourself</label>
-									    <input ng-model="second.input" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-									    <button ng-click="send(second.input,'second')" class="btn btn-success">Send</button>
-									    <p class="texting small" ng-show="first.texting">First phone is texting...</p>
-									    <div class="text" ng-repeat="text in texts">
-									    	<div class="{{(text.sender=='first')?'sender':'recipient'">
-									    		text.message
+									    <div ng-repeat="text in texts">
+									    	<div class="text {{(text.sender=='second')?'sender':'recipient'}}">
+									    		{{text.message}}
 								    		</div>
 									    </div>
 									</div>
 								</div>
+								<div class="absolute-bottom">
+								    <p class="texting small" ng-show="first.texting">First phone is texting...</p>
+								    <div class="input-group">
+								    	<input ng-model="second.input" ng-change="textingIndicator(second,true)" ng-blur="textingIndicator(second,false)" class="form-control" id="exampleInputEmail1" placeholder="enter text">
+								    	<span class="input-group-btn">
+								    		<button ng-click="send(second.input,'second')" class="btn btn-default">Send</button>
+								    	</span>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="carousel-item">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="header">
+							<h3>Customize</h3>
+						</div>
+						<div class="mobile-container">
+							<img src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">
+										Header
+									</h1>
+								</div>
+								<div class="mobile-content has-header">
+									<scrolling-background></scrolling-background>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="carousel-item">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="header">
+							<h3>Card Shows</h3>
+						</div>
+						<div ng-controller="cardStuntCtrl">
+							<!--Size-->
+							<input ng-model="size.x" placeholder="x"/>
+							<input ng-model="size.y" placehodler="y"/>
+							<button class="btn btn-submit" ng-click="changeSize(size.x,size.y)">Change Size</button>
+							<!-- control a tab with ngModel -->
+							<div class="btn-group" ng-model="activeTab" bs-radio-group>
+							  <label class="btn btn-default" ng-repeat="tab in tabs">
+							    <input class="btn btn-default" value="{{ $index }}" type="radio">Time n°{{ $index + 1 }}
+							  </label>
+							</div>
+							<div class="btn btn-default" ng-click="pushTab()">Add new tab</div>
+							<!-- ngModel is optional -->
+							<div ng-model="activeTab" bs-tabs>
+							  <div ng-repeat="tab in tabs" title="{{ tab.title }}" ng-bind="tab.content" bs-pane></div>
+							  <div ng-repeat="columns in tab.rows">
+							  	columns
+							  	<div ng-repeat="column in columns">
+							  		<div class="stunt-card"></div>
+							  	</div>
+							  </div>
 							</div>
 						</div>
 					</div>

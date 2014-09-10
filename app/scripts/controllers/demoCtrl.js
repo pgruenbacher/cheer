@@ -15,21 +15,33 @@ angular.module('blocksquadApp')
     $scope.data={};
     $scope.first={};
     $scope.second={};
+    $scope.carouselIdex={};
     $scope.cheers=DemoService.cheers();
+    $scope.demo={
+      0:{
+        title:'Vote on Trends',
+        message:'Put more stuff here'
+      },
+      1:{
+        title:'Data Demonstration',
+        message:'Phones are connected to the cloud database. Each textmessage is sent and received using real-time synchronization'
+      },
+      2:{
+        title:'Icon Customization',
+        message:'Put more stuff here'
+      },
+      3:{
+        title:'Card Stunts',
+        message:'Put more stuff here'
+      }
+    };
     var ref = new Firebase(FBURL+'/demo/texts'); //jshint ignore:line
-    var sync = $firebase(ref.limit(14));
+    var sync = $firebase(ref.limit(5));
     $scope.texts = sync.$asArray();
     console.log($scope.cheers);
     $scope.data.disableClick=function(bool){
       $scope.disable=bool;
       console.log('disable',bool);
-    };
-    $scope.data.customFunction=function(){
-      return 'fuck you too';
-    };
-    $scope.enableClick=function(){
-      $scope.disable=true;
-      console.log('disable','trueee');
     };
     $scope.select=function(key){
       if(!$scope.disable){
@@ -45,8 +57,12 @@ angular.module('blocksquadApp')
     	$scope.popup=false;
     };
     $scope.send=function(message,sender){
+      console.log('send',message,sender);
       console.log($scope.first,$scope.second);
       $scope.texts.$add({message:message,sender:sender});
     };
-
+    $scope.textingIndicator=function(texter,bool){
+      console.log(texter);
+      texter.texting=bool;
+    };
   });

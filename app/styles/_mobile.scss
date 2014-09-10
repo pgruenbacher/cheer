@@ -79,3 +79,30 @@ $mobile-pane-width: 192px;
     @include border-radius(4px);
   }
 }
+.scrolling-background{
+  position: absolute;
+  top: -100%;
+  left: -150%;
+  width: $mobile-container-height*2;
+  height: $mobile-container-height*2;
+  @include rotate(45deg);
+  background-image: image-url('ohio-state-background.gif');
+  background-repeat: repeat;
+}
+.sender{
+  text-align: left;
+  @include background-image(linear-gradient(#ffcdff, #d4a4f1 30%, #e986f2 70%, #ff66ff));
+}
+.recipient{
+  text-align: right;
+  @include background-image(linear-gradient(#a4ffff, #97fcdf 30%, #6ff8b9 70%, #6bf59d));
+}
+.text{
+  border-radius:3px;
+  padding: 5px;
+  margin-top: 6px;
+  color:#333333;
+}
+.texting{
+  color:gray;
+}
