@@ -21,7 +21,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'simpleLogin',
-    'angular-momentum-scroll'
+    'angular-momentum-scroll-custom',
+    'angular-carousel'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

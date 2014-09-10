@@ -171,8 +171,10 @@ module.exports = function (grunt) {
         exclude: [/bower_components.ionic.release.css.ionic.css/,
                   /bower_components.bootstrap.dist.css.bootstrap.css/,
                   /ionic/,
+                  /angular-momentum-scroll/,
                   /bower_components.bootstrap-sass.dist.css.bootstrap.css/,
-                  /bower_components.bootstrap-sass.dist.js.bootstrap.js/]
+                  /bower_components.bootstrap-sass.dist.js.bootstrap.js/,
+                  /bower_components.bootstrap.dist.js.bootstrap.js/]
       },
       sass: {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],

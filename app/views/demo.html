@@ -3,62 +3,127 @@
 
 	</div>
 	<div class="content">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="header">
-					<h3>Create</h3>
-				</div>
-				<div class="mobile-container">
-					<img class="mobile-image" src="images/mobile-container-black.svg"/>
-					<div class="mobile-pane">
-						<div class="mobile-bar mobile-bar-header mobile-bar-royal">
-							<h1 class="title">Header</h1>
+		<ul rn-carousel="demo" rn-carousel-control>
+			<li class="carousel-item">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="header">
+							<h3>Create</h3>
+						</div>
+						<div class="mobile-container">
+							<img class="mobile-image" src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">Header</h1>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="header">
-					<h3>Vote</h3>
-				</div>
-				<div class="mobile-container">
-					<img src="images/mobile-container-black.svg"/>
-					<div class="mobile-pane">
-						<div class="mobile-bar mobile-bar-header mobile-bar-royal">
-							<h1 class="title">Header</h1>
+					<div class="col-md-4">
+						<div class="header">
+							<h3>Vote</h3>
 						</div>
-						<div style="width: 192px; height: 300px;" class="mobile-content has-header" scrollable parameters="{{ {vScroll : true, snap: '.row'} }}">
-							<div class="mobile-list">
-								<div class="row mobile-item link" ng-click="select(key)" ng-repeat="(key,cheer) in cheers">
-									<div class="">
-										<span class="cheer-title">{{cheer.title}}</span>
+						<div class="mobile-container">
+							<img src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">Header</h1>
+								</div>
+								<div style="width: 192px; height: 300px;" class="mobile-content has-header" scrollable parameters="{{ {vScroll : true, snap: '.row'} }}" on-scroll-end="data.disableClick(false)" on-scroll-start="data.disableClick(true)" disable-Click="data.disableClick(true)">
+									<div class="mobile-list">
+										<div class="row mobile-item link" ng-click="select(key)" ng-repeat="(key,cheer) in cheers">
+											<div class="">
+												<span class="cheer-title">{{cheer.title}}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="header">
+							<h3>Cheer</h3>
+						</div>
+						<div class="mobile-container">
+							<img src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div cheer-popup="popup" class="mobile-popup" ng-show="popup">
+
+								</div>
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">Header</h1>
+								</div>
+								<div class="mobile-content has-header">
+									<div class="mobile-backdrop" ng-class="{active:popup}" ng-show="popup" ng-click="closeAlert()">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="header">
-					<h3>Cheer</h3>
-				</div>
-				<div class="mobile-container">
-					<img src="images/mobile-container-black.svg"/>
-					<div class="mobile-pane">
-						<div cheer-popup="popup" class="mobile-popup" ng-show="popup">
+			</li>
+			<li class="carousel-item">
+				<div class="row">
+					<div class="col-md-6">
 
+						<div class="header">
+							<h3>Push Data</h3>
 						</div>
-						<div class="mobile-bar mobile-bar-header mobile-bar-royal">
-							<h1 class="title">Header</h1>
+						<div class="mobile-container">
+							<img src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">
+										Header
+									</h1>
+								</div>
+								<div class="mobile-content has-header">
+									<div class="mobile-list">
+										<div class="form-group">
+										    <label for="exampleInputEmail1">Chat with yourself</label>
+										   	<input ng-model="first.input" class="form-control" placeholder="enter text"/>
+										    <button ng-click="send(first.input,'first')" class="btn btn-success">Send</button>
+										    <p class="texting small" ng-show="first.texting">First phone is texting...</p>
+										    <div class="text" ng-repeat="text in texts">
+										    	<div class="{{(text.sender=='first')?'sender':'recipient'">
+										    		text.message
+									    		</div>
+										    </div>
+									  	</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="mobile-content has-header">
-							<div class="mobile-backdrop" ng-class="{active:popup}" ng-show="popup" ng-click="closeAlert()">
+					</div>
+					<div class="col-md-6">
+						<div class="header">
+							<h3>Receive Data</h3>
+						</div>
+						<div class="mobile-container">
+							<img src="images/mobile-container-black.svg"/>
+							<div class="mobile-pane">
+								<div class="mobile-bar mobile-bar-header mobile-bar-royal">
+									<h1 class="title">Header</h1>
+								</div>
+								<div class="mobile-content has-header">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Chat with yourself</label>
+									    <input ng-model="second.input" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+									    <button ng-click="send(second.input,'second')" class="btn btn-success">Send</button>
+									    <p class="texting small" ng-show="first.texting">First phone is texting...</p>
+									    <div class="text" ng-repeat="text in texts">
+									    	<div class="{{(text.sender=='first')?'sender':'recipient'">
+									    		text.message
+								    		</div>
+									    </div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</li>
+		</ul>
 	</div>
 </div>

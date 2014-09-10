@@ -23,7 +23,31 @@
 			"file": "app/views/demo.html",
 			"settings":
 			{
-				"buffer_size": 1125,
+				"buffer_size": 1874,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/scripts/controllers/demoCtrl.js",
+			"settings":
+			{
+				"buffer_size": 634,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/directives/cheerpopup.js",
+			"settings":
+			{
+				"buffer_size": 339,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/partials/cheerPopup.html",
+			"settings":
+			{
+				"buffer_size": 104,
 				"line_ending": "Windows"
 			}
 		},
@@ -36,26 +60,26 @@
 			}
 		},
 		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 4346,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/styles/_app.scss",
 			"settings":
 			{
-				"buffer_size": 1625,
+				"buffer_size": 1783,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/scripts/services/demoService.js",
+			"file": "app/styles/_mobile.scss",
 			"settings":
 			{
-				"buffer_size": 1577,
+				"buffer_size": 1580,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bower_components/ionic/scss/_popup.scss",
+			"settings":
+			{
+				"buffer_size": 2396,
 				"line_ending": "Unix"
 			}
 		}
@@ -84,25 +108,30 @@
 	},
 	"file_history":
 	[
-		"/C/Users/pgrue_000/blocksquad/.sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/_app.scssc",
-		"/C/Users/pgrue_000/blocksquad/app/styles/_mobile.scss",
-		"/C/Users/pgrue_000/blocksquad/app/styles/main.scss",
-		"/C/Users/pgrue_000/blocksquad/Gruntfile.js",
-		"/C/Users/pgrue_000/blocksquad/app/views/about.html",
-		"/C/Users/pgrue_000/blocksquad/app/styles/mobile/_list.scss",
 		"/C/Users/pgrue_000/blocksquad/app/index.html",
+		"/C/Users/pgrue_000/blocksquad/app/views/frontpage.html",
+		"/C/Users/pgrue_000/blocksquad/bower_components/bootstrap-sass/lib/_variables.scss",
+		"/C/Users/pgrue_000/blocksquad/bower_components/bootstrap-sass/lib/bootstrap.scss",
+		"/C/Users/pgrue_000/blocksquad/app/views/main.html",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_app.scss",
+		"/C/Users/pgrue_000/blocksquad/app/scripts/services/demoService.js",
+		"/C/Users/pgrue_000/blocksquad/app/views/partials/navbar.html",
+		"/C/Users/pgrue_000/blocksquad/Gruntfile.js",
+		"/C/Users/pgrue_000/blocksquad/app/styles/mobile/_bar.scss",
+		"/C/Users/pgrue_000/blocksquad/app/styles/_mobile.scss",
+		"/C/Users/pgrue_000/blocksquad/app/styles/mobile/_list.scss",
+		"/C/Users/pgrue_000/blocksquad/app/styles/mobile/_item.scss",
+		"/C/Users/pgrue_000/blocksquad/.sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/_app.scssc",
+		"/C/Users/pgrue_000/blocksquad/app/styles/main.scss",
+		"/C/Users/pgrue_000/blocksquad/app/views/about.html",
 		"/C/Users/pgrue_000/blocksquad/bower.json",
 		"/C/Users/pgrue_000/blocksquad/.sass-cache/fdcfa9381eddb579676cfa2a55cb26d029440e49/main.scssc",
 		"/C/Users/pgrue_000/blocksquad/bower_components/ionic/scss/ionic.scss",
 		"/C/Users/pgrue_000/blocksquad/app/views/demo.html",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/app.js",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/demo.js",
-		"/C/Users/pgrue_000/blocksquad/app/scripts/services/demoService.js",
 		"/C/Users/pgrue_000/blocksquad/app/styles/_fonts.scss",
-		"/C/Users/pgrue_000/blocksquad/app/styles/_app.scss",
 		"/C/Users/pgrue_000/blocksquad/test/spec/controllers/demo.js",
-		"/C/Users/pgrue_000/blocksquad/app/views/partials/navbar.html",
-		"/C/Users/pgrue_000/blocksquad/app/views/main.html",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/main.js",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/account.js",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/login.js",
@@ -123,7 +152,6 @@
 		"/C/Users/pgrue_000/blocksquad/app/scripts/directives/holder.js",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/about.js",
 		"/C/Users/pgrue_000/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/pgrue_000/blocksquad/app/views/frontpage.html",
 		"/C/Users/pgrue_000/blocksquad/app/scripts/controllers/frontpage.js",
 		"/C/Users/pgrue_000/blocksquad/app/views/navbar.html",
 		"/C/Users/pgrue_000/blocksquad/.bowerrc",
@@ -207,11 +235,7 @@
 		"/C/Users/pgrue_000/xcards/www/lib/ionic/scss/_select.scss",
 		"/C/Users/pgrue_000/xcards/bower.json",
 		"/C/Users/pgrue_000/xcards/www/lib/ngCordova/.bower.json",
-		"/C/Users/pgrue_000/xcards/www/lib/ngCordova/bower.json",
-		"/C/Users/pgrue_000/xcards/www/lib/ngCordova/src/plugins/contacts.js",
-		"/C/Users/pgrue_000/xcards/www/lib/angular/angular.js",
-		"/C/Users/pgrue_000/xcards/www/lib/restangular/dist/restangular.js",
-		"/C/Users/pgrue_000/xcards/www/js/directives.js"
+		"/C/Users/pgrue_000/xcards/www/lib/ngCordova/bower.json"
 	],
 	"find":
 	{
@@ -229,6 +253,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"backdrop",
+			"compass",
+			".content",
+			".bar",
+			"bar",
+			"header",
+			".list",
+			".mobile",
+			".list",
+			".item",
 			"onScroll",
 			"ui.scroll",
 			"$mobile",
@@ -346,17 +380,7 @@
 			"none found",
 			"confirm",
 			"enco",
-			"encoded",
-			"create:",
-			"param",
-			".post",
-			"transferCtrl",
-			"ngMin",
-			"saveCreate",
-			"UserSErvice",
-			"LocalStorage",
-			"common",
-			"auth-logout"
+			"encoded"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -382,15 +406,15 @@
 					"file": "app/views/demo.html",
 					"settings":
 					{
-						"buffer_size": 1125,
+						"buffer_size": 1874,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								575,
-								575
+								1786,
+								1786
 							]
 						],
 						"settings":
@@ -399,13 +423,91 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 259.0,
+						"translation.y": 684.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "app/scripts/controllers/demoCtrl.js",
+					"settings":
+					{
+						"buffer_size": 634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/scripts/directives/cheerpopup.js",
+					"settings":
+					{
+						"buffer_size": 339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/partials/cheerPopup.html",
+					"settings":
+					{
+						"buffer_size": 104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "app/scripts/app.js",
 					"settings":
 					{
@@ -416,8 +518,8 @@
 						"selection":
 						[
 							[
-								416,
-								416
+								19,
+								19
 							]
 						],
 						"settings":
@@ -427,53 +529,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 241.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 4346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 834.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "app/styles/_app.scss",
 					"settings":
 					{
-						"buffer_size": 1625,
+						"buffer_size": 1783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1486,
-								1489
+								1782,
+								1782
 							]
 						],
 						"settings":
@@ -483,34 +557,63 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1414.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/scripts/services/demoService.js",
+					"buffer": 6,
+					"file": "app/styles/_mobile.scss",
 					"settings":
 					{
-						"buffer_size": 1577,
+						"buffer_size": 1580,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1350,
-								1350
+								1534,
+								1534
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1086.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "bower_components/ionic/scss/_popup.scss",
+					"settings":
+					{
+						"buffer_size": 2396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -560,6 +663,58 @@
 		"selected_items":
 		[
 			[
+				"app",
+				"app/scripts/app.js"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"demo",
+				"app/scripts/controllers/demo.js"
+			],
+			[
+				"_mobile",
+				"app/styles/_mobile.scss"
+			],
+			[
+				"frontpage",
+				"app/views/frontpage.html"
+			],
+			[
+				"bootstrap-sass/lib/_varia",
+				"bower_components/bootstrap-sass/lib/_variables.scss"
+			],
+			[
+				"bootstrap.scss",
+				"bower_components/bootstrap-sass/lib/bootstrap.scss"
+			],
+			[
+				"app.scss",
+				"app/styles/_app.scss"
+			],
+			[
+				"main.html",
+				"app/views/main.html"
+			],
+			[
+				"navbar",
+				"app/views/partials/navbar.html"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"_list.sc",
+				"app/styles/mobile/_list.scss"
+			],
+			[
+				"_mobile.sc",
+				"app/styles/_mobile.scss"
+			],
+			[
 				"services/demoser",
 				"app/scripts/services/demoService.js"
 			],
@@ -568,16 +723,8 @@
 				"app/styles/_app.scss"
 			],
 			[
-				"index",
-				"app/index.html"
-			],
-			[
 				"app.js",
 				"app/scripts/app.js"
-			],
-			[
-				"demo",
-				"app/views/demo.html"
 			],
 			[
 				"bower",
@@ -596,24 +743,12 @@
 				"Gruntfile.js"
 			],
 			[
-				"grunt",
-				"Gruntfile.js"
-			],
-			[
 				"controllers/demo",
 				"app/scripts/controllers/demo.js"
 			],
 			[
 				"app.scs",
 				"app/styles/_app.scss"
-			],
-			[
-				"navbar",
-				"app/views/partials/navbar.html"
-			],
-			[
-				"app",
-				"app/scripts/app.js"
 			],
 			[
 				"scss",
@@ -670,10 +805,6 @@
 			[
 				"holder",
 				"app/scripts/directives/holder.js"
-			],
-			[
-				"frontpage",
-				"app/views/frontpage.html"
 			],
 			[
 				"templates/",

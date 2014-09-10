@@ -12,6 +12,7 @@ angular.module('blocksquadApp')
 		templateUrl: 'views/partials/cheerPopup.html',
 		restrict: 'A',
 		link: function postLink(scope, element, attrs) {
+			console.log(scope,element,attrs);
 		}
     };
   });
